@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        {% block style %}{% endblock %}
+        <!-- <style>
+            .indiv:hover {
+            background-color: yellow;
+            }
+        </style> -->
+        <title> {% block title %}{% endblock %} </title>
+    </head>
+
+    <body>
+        <nav>
+            <a href="/"> Home </a> |
+            <a href="/lessons_text"> Text </a> |
+            <a href="/audio_lessons"> Audio </a> |
+            <a href="/video_lessons"> Video </a> |
+
+        </nav>
+        <main>
+            {% block main %}{% endblock %}
+        </main> 
+    </body>
+    {% block javascript %}
+    {% endblock %}
+</html>

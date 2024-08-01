@@ -1,0 +1,26 @@
+.indiv {
+  margin: 0 1px;
+}
+
+.indiv:hover {
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+}
+
+.leveloptions {
+  padding: 4px;
+  margin: 2px;
+  display: inline-block;
+}
+
+.leveloptions:hover {
+  border: 1px solid black;
+  background-color: yellow !important;
+}
+
+#learninglevels {
+  list-style-type: none;
+}

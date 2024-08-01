@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block style %}
+<link rel="stylesheet" href="../static/lessons_text.css">
+{% endblock %}
+
+{% block title %}
+    Text Lessons
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div style="flex: 70%">
+        <form action="" id="downloadhtmlform">
+            <input type="text" id="htmlurl" name="paste url">
+            <button type="submit">Submit</button>
+        </form>
+
+        <form action="" id="textlessonform">
+            <select id="lessonselector" name="lessonselector">
+            </select>
+            <button type="submit">Learn</button>
+        </form>
+
+        <div id="transcript"></div>
+    </div>
+    
+    <div style="flex: 30%" id="learning">
+        <h2>
+            <span id="learningsimplified"></span>
+            <span id="learningpinyin"></span>
+            <span id="learningpos"></span>
+        </h2>
+        <ul id="learningtranslation"></ul>
+        <ul id="learninglevels">
+            <li class="leveloptions" data-level="0" onclick="updateLevel(this)"> unknown </li>
+            <li class="leveloptions" data-level="1" onclick="updateLevel(this)"> 1 </li>
+            <li class="leveloptions" data-level="2" onclick="updateLevel(this)"> 2 </li>
+            <li class="leveloptions" data-level="3" onclick="updateLevel(this)"> 3 </li>
+            <li class="leveloptions" data-level="4" onclick="updateLevel(this)"> 4 </li>
+            <li class="leveloptions" data-level="5" onclick="updateLevel(this)"> known </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ url_for('static', filename='lessons_text.js') }}"></script>
+{% endblock %}
